@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>少女前线Q版模拟器</title>
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/sideview.css">
+	<!-- 基本库文件 -->
+	<script src="js/jquery/jquery.min.js"></script>
+	<script src="js/pixi/pixi.js"></script>
+	<script src="js/pixi/pixi-spine.js"></script>
+	<!-- <script src="js/pixi/SkewGraphics.js"></script> -->
+	<!-- 相关数据文件 -->
+	<script src="js/data/girls.js"></script>
+	<script src="js/data/girls_name.js"></script>
+	<script src="js/data/furnitures.js"></script>
+	<!-- 相关格式处理文件 -->
+	<script src="js/tools/SkeletonBinary.js"></script>
+	<script src="js/tools/Atlas.js"></script>
+	<script src="js/tools/SkeletonLoader.js"></script>
+	<script src="js/tools/ImageLoader.js"></script>
+	<!-- 视图文件 -->
+	<script src="js/view/BaseView.js"></script>
+	<script src="js/view/DormView.js"></script>
+	<script src="js/view/SideView.js"></script>
+	<script src="js/view/PreView.js"></script>
+	<script src="js/view/EditView.js"></script>
+
+	<script src="test.js"></script>
+</head>
+<body>
+	<div class="mainview">
+		<div class="side sideleft">
+			<div class="exit exitleft"></div>
+			<div class="title"><span>预览菜单</span></div>
+			<div class="view"></div>
+			<div class="menu">
+				<div class="item" id="wall">
+					<div class="title itemclose"><span>墙纸</span></div>
+					<div class="menu"></div>
+				</div>
+				<div class="item" id="floor">
+					<div class="title itemclose"><span>地板</span></div>
+					<div class="menu"></div>
+				</div>
+				<div class="item" id="girl">
+					<div class="title itemclose"><span>枪娘</span></div>
+					<div class="menu"></div>
+				</div>
+				<div class="item" id="fur">
+					<div class="title itemclose"><span>家具</span></div>
+					<div class="menu"></div>
+				</div>
+			</div>
+		</div>
+		<div class="side sideright">
+			<div class="exit exitright"></div>
+			<div class="title"><span>编辑菜单</span></div>
+			<div class="menu">
+				<div class="item" id="wall">
+					<div class="tab"><span>墙纸：</span><span class='name'>空</span><div class="remove icon"></div></div>
+				</div>
+				<div class="item" id="floor">
+					<div class="tab"><span>地板：</span><span class='name'>空</span><div class="remove icon"></div></div>
+				</div>
+				<div class="item" id="item">
+					<div class="tab" style="background-color: rgba(255, 255, 255, 0.5);"><span>枪娘与家具</span></div>
+					<div class="menu">
+					</div>
+				</div>
+			</div>
+			<div class="edit">
+				<div class='pos_x'>
+					<span>X : </span>
+					<input type="range" min="0" max="1920">
+				</div>
+				<div class='pos_y'>
+					<span>Y : </span>
+					<input type="range" min="0" max="1080">
+				</div>
+				<div class='scale'>
+					<span>缩放 : </span>
+					<input type="range" min="200" max="3000">
+				</div>
+				<div class="button top">上移</div>
+				<div class="button down">下移</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
